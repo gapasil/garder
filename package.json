@@ -45,6 +45,9 @@
     "serve": "^13.0.2",
     "web-vitals": "^0.2.4"
   },
+ "overrides": {
+    "graceful-fs": "^4.2.9"
+  },
   "scripts": {
     "start": "webpack serve --mode development",
     "build-dev": "rm -rf dist/*.* && webpack --mode=development",
