@@ -1,0 +1,7 @@
+.color_picker  span div {
+    border: 1px solid #D6D6D6;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}.color_picker > span > div > span > div {
+     /*box-shadow: red 12px 10px 3px 8.5px inset;*/
+}

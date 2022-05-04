@@ -1,0 +1,215 @@
+.selectors {
+  color: #999999;
+  width: 70%;
+  max-width: 808px;
+  @media (max-width: 960px) {
+    width: 100%;
+    max-width: none;
+  }
+
+  .select input {
+    padding: 7px 0px !important;
+  }
+
+  & > div {
+    width: 100% !important;
+
+    & > div {
+
+      width: 100% !important;
+    }
+  }
+}
+
+.select {
+  [class$="-control"] {
+    border: 1px solid #131314 !important;
+    border-radius: 8px;
+  }
+}
+
+.order {
+  width: 70%;
+  max-width: 808px;
+  margin-right: 25px;
+  @media (max-width: 960px) {
+    width: 100%;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  label {
+    @media (max-width: 680px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start !important;
+      span {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      line-height: 140%;
+      font-size: 14px;
+      color: #CC3D3D;
+    }
+
+    & > div {
+      width: 70%;
+      @media (max-width: 680px) {
+        width: 100%;
+      }
+    }
+
+    input {
+      border: 1px solid #131314;
+      padding: 13px 12px !important;
+      font-size: 16px !important;
+    }
+
+  }
+}
+
+textarea {
+  color: #999999;
+  height: 134px;
+  width: 70% !important;
+  border: 1px solid #131314 !important;
+  border-radius: 8px !important;
+  font-size: 16px !important;
+  @media (max-width: 680px) {
+    width: 100% !important;
+  }
+}
+
+.payment {
+  background: rgba(204, 204, 204, 0.16);;
+  border-radius: 8px;
+
+  margin-left: 240px;
+
+
+  @media (max-width: 1140px){
+    margin-left: 200px;
+  }
+
+  @media (max-width: 680px){
+    margin-left: 0;
+  }
+
+  .offert {
+    width: 100%;
+    color: #666666;
+    @media(max-width: 480px) {
+      flex-wrap: wrap;
+      div {
+        width: 100%;
+      }
+    }
+
+    p {
+      max-width: 330px;
+      @media (max-width: 960px) {
+        max-width: 300px;
+      }
+
+      a {
+        text-decoration: underline;
+        color: #333333;
+      }
+    }
+
+    button {
+      padding: 12px 80px;
+      @media (max-width: 960px) {
+        padding: 12px 40px;
+      }
+      @media(max-width: 480px) {
+        margin-top: 24px;
+        width: 100%;
+      }
+    }
+  }
+
+  .total {
+    min-width: 288px;
+    @media (max-width: 1024px) {
+      width: 100%;
+    }
+
+    div {
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.info {
+  width: 100%;
+
+  label {
+    margin: 4px 0;
+  }
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  flex-direction: row;
+  padding-bottom: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & div {
+    border-radius: 8px !important;
+    text-transform: capitalize;
+  }
+}
+
+.dayInput {
+  height: 24px;
+  width: 100px;
+  padding: 0px 0px 4px 0px;
+  background: transparent;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #131314;
+}
+
+.Day {
+  border-radius: 8px;
+}
+
+.bank {
+  border-radius: 8px;
+  background: #FFFFFF;
+
+  border: 1px solid transparent;
+
+  &.active {
+    border: 1px solid #4853A2;
+  }
+}
+
+.timeDeliveries {
+  margin-left: 245px;
+
+  @media (max-width: 1140px){
+    margin-left: 205px;
+  }
+
+  @media (max-width: 860px){
+    margin-left: 0;
+  }
+}

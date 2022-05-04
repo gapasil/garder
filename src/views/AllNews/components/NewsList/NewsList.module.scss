@@ -1,0 +1,31 @@
+.list {
+
+
+
+  & > div > div > a {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #4853A2;
+  }
+
+  .subscribe {
+    max-width: 392px;
+    max-height: 376px;
+    padding: 24px;
+    background: url("assets/svg/bg.svg"),#EBECF5;
+    border-radius: 8px;
+
+    & input{
+      padding:11px 12px;
+      font-size: 16px;
+      line-height: 145%;
+      margin-bottom: 16px;
+    }
+    & button{
+      font-size: 16px;
+      line-height: 130%;
+      width: 100%;
+    }
+  }
+
+}

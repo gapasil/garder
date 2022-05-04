@@ -1,0 +1,13 @@
+export { default as Home } from './Home';
+export { default as Products } from './Products';
+export { default as ProductPage } from './ProductPage';
+export { default as Cart } from './Cart';
+export { default as CreateOrder } from './CreateOrder';
+export { default as Profile } from './Profile';
+export { default as News } from './News';
+export { default as NewsPage } from './NewsPage';
+export { default as Faq } from './Faq';
+export { default as Favourites } from './Favourites';
+export { default as Popups } from './Popups';
+export { default as AllNews } from './AllNews';
+export { default as Policy } from './Policy';

@@ -1,0 +1,12 @@
+.mobileContainer{
+  width: 50%;
+  & > div{
+    width: 100%;
+  }
+
+  .mobileCat{
+    position: absolute;
+    z-index: 5;
+    background: #fff;
+  }
+}

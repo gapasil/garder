@@ -1,0 +1,122 @@
+@mixin hide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin radio-size {
+  width: var(--radio-size);
+  height: var(--radio-size);
+}
+
+$radio-background: #fff;
+$radio-active-background:  #4853A2;
+$radio-border-background:  #999999;
+$radio-before-background: #ffea00;
+$radio-active-before-background: #fff;
+$radio-active-red-background: red;
+
+$radio-width: 18px;
+$radio-height: 18px;
+$radio-switch-position: 4px;
+$radio-border-width: 1px;
+
+:root {
+  $radio-border: $radio-border-width solid $radio-border-background;
+  $radio-size: (($radio-height - ($radio-switch-position * 2)) - ($radio-border-width * 2));
+  $radio-active-before-position: $radio-width -
+    (($radio-switch-position * 2) + $radio-size + ($radio-border-width * 2));
+  $radio-background: $radio-background;
+  $radio-active-background: $radio-active-background;
+  $radio-before-background: $radio-before-background;
+  $radio-active-before-background: $radio-active-before-background;
+
+  --radio-switch-width: #{$radio-width};
+  --radio-switch-height: #{$radio-height};
+  --radio-switch-position: #{$radio-switch-position};
+  --radio-size: #{$radio-size};
+  --radio-background: #{$radio-background};
+  --radio-border: #{$radio-border};
+  --radio-transition: 0.4s;
+  --radio-active-background: #{$radio-active-background};
+  --radio-before-background: #{$radio-before-background};
+  --radio-active-before-background: #{$radio-active-before-background};
+  --radio-active-before-position: #{$radio-active-before-position};
+}
+
+.component {
+  display: flex;
+  flex-direction: row !important;
+  align-items: center !important;
+  cursor: pointer;
+  width: 100%;
+  .radioSwitch {
+    position: relative;
+    height: var(--radio-switch-height);
+    width: var(--radio-switch-width);
+    min-height: var(--radio-switch-height);
+    min-width: var(--radio-switch-width);
+    span{
+      margin-bottom: 0 !important;
+    }
+    input{
+      display: none;
+    }
+    & > input[type='redio'] {
+      @include hide();
+
+      &:checked + .radio,
+      &:focus + .radio {
+        background-color: var(--radio-active-background);
+
+      }
+
+      &:checked + .radio:before {
+        //transform: translateX(var(--radio-active-before-position));
+        background-color: #fff;
+      }
+    }
+
+    & > .radio {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--radio-background);
+      border: var(--radio-border);
+      border-radius: 3em;
+      transition: var(--radio-transition);
+
+      &::before {
+        position: absolute;
+        bottom: var(--radio-switch-position);
+        left: var(--radio-switch-position);
+        @include radio-size;
+        content: '';
+        background-color: var(--radio-background);
+        border-radius: 3em;
+        transition: var(--radio-transition);
+      }
+
+      &.active{
+        background: var(--radio-active-background);
+        border-color: var(--radio-active-background);
+      }
+    }
+    & > .active {
+      &::before {
+        height: 8px;
+        width: 8px;
+        background-color: var(--radio-background);
+      }
+    }
+  }
+
+  .label {
+    margin: 0 0 0 10px;
+    user-select: none;
+  }
+}

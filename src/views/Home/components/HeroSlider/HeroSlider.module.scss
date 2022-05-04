@@ -1,0 +1,13 @@
+.slider{
+  margin-top: 40px;
+  position: relative;
+}
+.slideItem{
+  min-height: 384px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  @media (max-width: 680px) {
+    min-height: 90px;
+  }
+}

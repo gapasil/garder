@@ -1,0 +1,257 @@
+.catalog_meta{
+
+  textarea{
+    width: 100% !important;
+    color: black;
+  }
+
+  textarea, input{
+    font-size: 13px !important;
+  }
+
+}
+
+.content {
+  padding: 24px;
+
+  .login {
+    a {
+      font-weight: normal;
+      padding-bottom: 2px;
+      color: #000000;
+      border-bottom: 1px solid #000000;
+    }
+  }
+
+  .auth {
+    & > p {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 16px;
+
+    }
+
+    .socialBtn {
+      display: flex;
+      align-items: center;
+      padding: 12px 15px;
+      font-size: 16px;
+      line-height: 19px;
+      background: #fff;
+      border: 1px solid transparent;
+      border-radius: 8px;
+
+      &:last-child {
+        margin-top: 16px;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+        margin-right: 15px;
+      }
+
+      &.google {
+        color: #4C8BF5;
+        border: 1px solid #4C8BF5;
+      }
+
+      &.apple {
+        background: #000000;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+      }
+    }
+
+    button {
+      margin-top: 24px;
+      width: 100%;
+      padding: 13px;
+    }
+
+    form {
+      & > div {
+        margin-bottom: 16px;
+
+        & + p {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    input {
+      border: 1px solid #000000;
+      font-size: 16px;
+      line-height: 140%;
+    }
+
+    .checkbox {
+      display: flex;
+      align-items: center;
+
+      label {
+        margin: 0;
+      }
+    }
+  }
+
+  .divine {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 24px 0;
+
+    div {
+      width: 100%;
+      height: 0;
+    }
+
+    span {
+      margin: 0 8px;
+    }
+  }
+}
+
+.listContainer {
+  .listCat {
+    padding: 10px 24px;
+    border-top: 1px solid rgba(204, 204, 204, 0.24);;
+    border-bottom: 1px solid rgba(204, 204, 204, 0.24);
+    display: flex;
+
+    a {
+      width: 100%;
+      color: #131314;
+      outline: none;
+    }
+
+    &:not(:first-child) {
+      border-top: none;
+    }
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  .btnGroup {
+    padding: 24px 24px 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & > div {
+      width: 100%;
+
+      &:first-child {
+        margin-right: 24px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.filterSort {
+  .sort {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #999999;
+
+    &:hover {
+      color: #666666;
+    }
+
+    &.active {
+      color: #131314;
+    }
+  }
+
+  .seasons {
+    width: 100%;
+
+    .list {
+
+
+      form {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 15px;
+
+        & > div {
+          width: 47%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+
+          & > div {
+            width: 100%;
+            margin-left: 5px;
+          }
+        }
+
+        input {
+          border: 1px solid #000000;
+          border-radius: 4px;
+          color: #131314;
+          padding: 12px 5px;
+          font-size: 14px;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}
+
+.rangeTemplate {
+  padding: 10px 0;
+  border-top: 1px solid rgba(204, 204, 204, 0.24);;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.24);
+}
+
+.cities {
+  //overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 70vh;
+  @media(max-width: 480px) {
+    overflow-y: scroll;
+    flex-wrap: nowrap;
+  }
+
+  p {
+    cursor: pointer;
+    color: #666666;
+    font-weight: normal !important;
+    max-width: 130px;
+  }
+
+  .active {
+    font-weight: bold !important;
+    color: #4853A2;
+  }
+
+}
+
+.colorPicker {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.entryEmail {
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 140% !important;
+  color: #131314 !important;
+}

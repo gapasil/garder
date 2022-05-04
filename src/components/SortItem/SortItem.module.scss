@@ -1,0 +1,38 @@
+.sort {
+  position: relative;
+  & > span {
+    cursor: pointer;
+    color: #131314;
+    padding: 5px 10px;
+    border: 1px solid #131314;
+    border-radius: 4px;
+
+    &:hover{
+      border-color: #4853A2;
+      color:#4853A2;
+    }
+
+    & img {
+      margin-left: 8px;
+    }
+  }
+
+  &.active {
+   & > span {
+      color: #FFFFFF;
+      border-color: #4853A2;
+      background: #4853a2;
+    }
+  }
+  .content{
+    z-index: 100;
+    top:31px;
+    position: absolute;
+    //padding:20px 15px;
+    border: 1px solid #EBECF5;
+    border-radius: 8px;
+    width: max-content;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  }
+}

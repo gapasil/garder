@@ -1,0 +1,136 @@
+.cartItem {
+  padding: 0 0 24px 0;
+  border-bottom: 1px solid #CCCCCC;
+
+  & .description {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    @media (max-width: 480px) {
+      flex-wrap: wrap;
+      p{
+        font-size: 14px !important;
+        line-height: 140% !important;
+      }
+    }
+  }
+
+  & img {
+    display: block;
+    margin-right: 16px;
+  }
+
+  & .info {
+    display: flex;
+    & img{
+      height: 80px;
+      width: 100px;
+      object-fit: contain;
+      @media(max-width: 680px){
+        height: 68px;
+        width: 84px;
+      }
+    }
+  }
+
+  & .selects {
+    //width: 150px;
+  }
+
+  & .select {
+    display: flex;
+    align-items: center;
+  }
+
+  .circleOption {
+    margin-bottom: 8px;
+    width: 10px;
+  }
+
+  .menuOption {
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+  }
+
+  .circleValue {
+    width: 10px;
+  }
+
+  .quantity {
+    display: flex;
+    align-items: center;
+    @media(max-width: 768px) {
+      margin-top: 16px;
+    }
+
+    & div {
+      margin: 0px 8px;
+      max-width: 40px;
+
+      input {
+        padding: 8px;
+      }
+    }
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .price {
+    max-width: 380px;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    @media(max-width: 768px) {
+      flex-direction: column-reverse;
+      max-width: 150px;
+      align-items: flex-end;
+      height: 100%;
+    }
+    @media (max-width: 480px) {
+      width: 100%;
+      max-width: none;
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  .btns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    transition: .3s;
+    opacity: 0;
+    @media(max-width: 480px){
+      opacity: 1;
+    }
+    .delete, .favourite {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      transition: .3s;
+      @media(max-width: 480px){
+        font-size: 14px;
+        margin-top: 16px;
+      }
+
+      &:not(:last-child) {
+        margin-right: 24px;
+      }
+
+      img {
+        margin-right: 12px !important;
+      }
+
+      &:hover {
+        color: #4853A2;
+      }
+    }
+
+    &.active {
+      opacity: 1;
+    }
+  }
+}

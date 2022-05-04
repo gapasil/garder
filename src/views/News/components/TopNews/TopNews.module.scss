@@ -1,0 +1,110 @@
+.news {
+  background: #FFFFFF;
+  color: #131314;
+  box-shadow: 0px -4px 24px rgba(0, 0, 0, 0.04), 0px 16px 27px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+  padding-left: 40px;
+  position: relative;
+  overflow: hidden;
+  @media (max-width: 580px) {
+    flex-direction: column-reverse;
+    padding: 16px !important;
+  }
+
+  .heroText {
+    padding: 110px 0;
+    max-width: 360px;
+    @media (max-width: 960px) {
+      max-width: 300px;
+      padding: 70px 0;
+    }
+    @media (max-width: 580px) {
+      padding-top: 160px;
+    }
+
+    p {
+      color: #666666;
+    }
+  }
+
+  .image {
+    background: transparent;
+    border-radius: 67px;
+    transform: rotate(24deg);
+    overflow: hidden;
+    width: 800px;
+    height: 700px;
+    position: absolute;
+    right: -100px;
+    top: -200px;
+
+    div {
+      content: "";
+      position: absolute;
+      width: 120%;
+      height: 120%;
+      top: 25%;
+      right: 0;
+      z-index: -1;
+      transform: rotate(-24deg);
+      background-size: 100% !important;
+    }
+
+    //img {
+    //  width: 200%;
+    //  transform: rotate(-24deg);
+    //  object-fit: cover;
+    //}
+
+    @media(max-width: 1140px) {
+      width: 600px;
+      height: 600px;
+      top: -120px;
+      div {
+        height: 125%;
+        width: 125%;
+      }
+    }
+    @media(max-width: 960px) {
+      width: 460px;
+      height: 410px;
+      top: -70px;
+      right: -170px;
+      div {
+        height: 145%;
+        width: 145%;
+      }
+    }
+    @media(max-width: 680px) {
+      width: 410px;
+      height: 380px;
+      top: -40px;
+      right: -200px;
+    }
+    @media(max-width: 580px) {
+      width: 610px;
+      height: 470px;
+      top: -370px;
+      right: -110px;
+      transform: rotate(100deg);
+      div {
+        transform: rotate(-100deg);
+        right: -300px;
+        height: 100%;
+        width: 120%;
+      }
+    }
+    @media(max-width: 480px) {
+      width: 530px;
+      height: 450px;
+      top: -350px;
+      right: -80px;
+      div {
+        right: -300px;
+        height: 100%;
+        width: 105%;
+        top: 10%;
+      }
+    }
+  }
+}

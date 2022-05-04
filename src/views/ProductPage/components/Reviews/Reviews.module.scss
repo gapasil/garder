@@ -1,0 +1,135 @@
+.reviews {
+  margin-top: 80px;
+  h2 {
+    @media(max-width: 680px) {
+      margin-top: 80px;
+    }
+  }
+
+  .list {
+    width: 73%;
+  }
+
+  @media (max-width: 680px) {
+
+    .list {
+      margin-top: 32px;
+      width: 100%;
+    }
+  }
+}
+
+.reviewIcon {
+  width: 16px;
+}
+
+.loadIcon {
+  cursor: pointer;
+}
+
+.ratingStars {
+  min-width: 80px;
+}
+
+.content {
+  width: 80%;
+  @media (max-width: 960px) {
+    width: 70%;
+  }
+
+  @media (max-width: 680px) {
+    width: 100%;
+    margin: 16px 0 !important;
+  }
+
+}
+
+.ratingPopup {
+
+  .rating {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 24px;
+
+    & > span {
+      margin-right: 50px;
+    }
+
+    img {
+      width: 44px;
+      height: 44px;
+    }
+  }
+
+  span {
+    color: #999999;
+  }
+
+  form {
+    padding: 0px 24px 24px;
+
+    & > div {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      @media (max-width: 680px) {
+        flex-wrap: wrap;
+      }
+
+      span {
+        margin-right: 110px;
+        min-width: 74px;
+      }
+    }
+
+    textarea {
+      height: 134px;
+      margin-bottom: 24px;
+    }
+
+    textarea, input {
+      border: 1px solid #131314;
+      border-radius: 8px;
+      width: 100% !important;
+    }
+
+    .input div {
+      width: 90%;
+
+      @media (max-width: 680px) {
+        width: 100%;
+      }
+
+    }
+  }
+
+  button {
+    margin: 24px 24px 0px auto;
+  }
+
+}
+
+.line {
+  border: 1px solid #CCCCCC;
+}
+
+.count {
+  min-width: 130px;
+  margin-right: 80px;
+  @media (max-width: 1140px) {
+    margin-right: 40px;
+  }
+}
+
+.clear {
+  a {
+    color: #131314;
+  }
+}
+
+.error {
+  width: 100%;
+  color: #CC3D3D;
+  margin: 16px 0px;
+}

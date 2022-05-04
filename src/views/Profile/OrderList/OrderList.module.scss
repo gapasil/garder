@@ -1,0 +1,17 @@
+.list {
+  width: 100%;
+
+  a {
+    font-weight: normal;
+    color: #999999;
+
+    @media (max-width: 680px) {
+      font-size: 16px;
+    }
+
+    &.active {
+      color: #131314;
+      border-bottom: 1px solid #131314;
+    }
+  }
+}

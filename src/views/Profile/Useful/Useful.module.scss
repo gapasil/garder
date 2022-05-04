@@ -1,0 +1,31 @@
+.useful{
+  width:100%;
+  p{
+    font-weight: normal;
+  }
+
+  @media (max-width: 960px) {
+    .list{
+      justify-content: center !important;
+    }
+    & .item {
+      margin-right: 8px !important;
+    }
+  }
+  & .item{
+    width:30%;
+    max-width: 320px;
+    min-width: 320px;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+    margin-right: 24px;
+
+    &:nth-child(3n){
+      margin-right: 0;
+    }
+  }
+
+}

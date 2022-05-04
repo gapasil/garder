@@ -1,0 +1,266 @@
+.order {
+  width: 100%;
+  max-width: 1024px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+
+  .card {
+    min-width: 704px;
+    max-width: 704px;
+    width: 80%;
+    background: #FFFFFF;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    margin-right: 24px;
+    margin-bottom: 24px;
+    @media(max-width: 960px){
+      min-width: auto;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+      margin-right: 16px;
+      object-fit: cover;
+    }
+
+    .num {
+      background: rgba(204, 204, 204, 0.24);
+      border-radius: 8px 8px 0px 0px;
+      padding: 12px;
+
+      .cancelOrder {
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 140%;
+        text-decoration-line: underline;
+        color: #666666;
+      }
+    }
+
+    .status {
+      display: flex;
+      justify-content: space-around;
+      padding-bottom: 12px;
+      @media(max-width: 480px) {
+        flex-direction: column;
+      }
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      span {
+        opacity: 0;
+
+        &.visible {
+          opacity: 1;
+        }
+      }
+
+      .point {
+        height: 10px;
+        width: 10px;
+        background: #FFFFFF;
+        border: 1px solid #CCCCCC;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: 10px 0;
+        @media (max-width: 480px) {
+          margin-right: 16px;
+
+          transform: rotate(90deg);
+        }
+      }
+
+      & .point::before {
+        content: '';
+        right: 8px;
+        position: absolute;
+        display: block;
+        border-bottom: 1px solid #CCCCCC;
+        width: 120px;
+        @media (max-width: 480px) {
+          width: 55px;
+        }
+      }
+
+      & .point::after {
+        content: '';
+        left: 8px;
+        position: absolute;
+        display: block;
+        border-bottom: 1px solid #CCCCCC;
+        width: 120px;
+        @media (max-width: 480px) {
+          width: 55px;
+        }
+      }
+
+      &.active .point {
+        border-color: #22C44B;
+        background: #22C44B;
+      }
+
+      &.active .point::after {
+        border-color: #22C44B;
+      }
+
+
+      &:first-child .point::before,
+      &:last-child .point::after {
+        display: none;
+      }
+
+      @media(max-width: 480px) {
+        flex-direction: row;
+        text-align: left;
+        justify-content: flex-start;
+        padding: 12px;
+      }
+    }
+  }
+
+  .processed {
+    & .item:first-child .point {
+      border-color: #22C44B;
+      background: #22C44B;
+    }
+
+    & .item:first-child .point::after {
+      border-color: #22C44B;
+    }
+
+    & .item:nth-child(2) .point {
+      border-color: #22C44B;
+    }
+
+    & .item:nth-child(2) .point::before {
+      border-color: #22C44B;
+      border-bottom-style: dashed;
+    }
+  }
+
+  .way {
+    & .item:nth-child(2) .point {
+      border-color: #22C44B;
+      background: #22C44B;
+    }
+
+    & .item:nth-child(2) .point::before {
+      border-color: #22C44B;
+      border-bottom-style: solid;
+    }
+
+    & .item:nth-child(2) .point::after {
+      border-color: #22C44B;
+      border-bottom-style: dashed;
+    }
+  }
+
+  .done {
+    & .item:nth-child(3) .point {
+      border-color: #22C44B;
+      background: #22C44B;
+    }
+
+    & .item:nth-child(3) .point::before {
+      border-color: #22C44B;
+    }
+
+    & .item:nth-child(2) .point::after {
+      border-color: #22C44B;
+      border-bottom-style: solid;
+    }
+  }
+
+  .product {
+    padding: 12px;
+    border-top: 1px solid #D6D6D6;
+
+    .price {
+      //& > p:first-child {
+      //  text-decoration: line-through;
+      //}
+    }
+
+    .text {
+      min-width: 220px;
+    }
+
+    .info {
+      min-width: 250px;
+    }
+  }
+
+  .total {
+    background: rgba(204, 204, 204, 0.24);
+    padding: 12px;
+    border-radius: 8px;
+    width: 20%;
+    min-width: 288px;
+    max-width: 288px;
+
+    & div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    & div:not(:last-child) {
+      margin: 12px 0px;
+    }
+
+    .payButton {
+      div {
+        width: 100%;
+
+        button {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 960px) {
+    flex-wrap: wrap;
+    .card {
+      max-width: none;
+      width: 100%;
+      margin-right: 0;
+    }
+    .total {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 572px) {
+    .card {
+      .product {
+        flex-wrap: wrap;
+
+        & > div:nth-child(2) {
+          flex-wrap: wrap;
+
+          & div {
+            width: 100%;
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+    .total {
+      width: 100%;
+      max-width: none;
+    }
+  }
+}

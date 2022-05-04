@@ -1,0 +1,210 @@
+.settings {
+  max-width: 808px;
+
+  form {
+    @media(min-width: 672px) {
+      & > div:first-child {
+        p {
+          display: none;
+        }
+      }
+    }
+    @media(max-width: 960px) {
+      & > div:first-child {
+        div {
+          max-width: 208px;
+
+          &:not(:last-child) {
+            margin-right: 24px;
+          }
+
+          input {
+            max-width: 208px;
+            min-width: 208px;
+          }
+        }
+      }
+    }
+    @media(max-width: 672px) {
+      & > div:first-child {
+        flex-wrap: wrap;
+
+        div {
+          max-width: 320px;
+          margin-right: 0;
+
+          input {
+            max-width: 328px;
+            min-width: 320px;
+          }
+        }
+      }
+    }
+  }
+
+  p {
+    font-weight: normal;
+  }
+
+  & div div input {
+    border: 1px solid #131314;
+    margin-right: 24px;
+    min-width: 253px;
+  }
+
+  & div div:last-child input {
+    margin: 0;
+  }
+
+  & div {
+    margin-bottom: 12px;
+
+    p {
+      min-width: 277px;
+      @media (max-width: 672px) {
+        min-width: 180px;
+        max-width: 320px;
+      }
+    }
+  }
+
+  .email {
+    width: 100%;
+
+    div {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      max-width: 253px;
+    }
+
+    @media(max-width: 960px) {
+      div {
+        max-width: 440px;
+      }
+      input {
+        max-width: 440px;
+        min-width: auto;
+      }
+    }
+    @media (max-width: 672px) {
+      flex-wrap: wrap;
+      max-width: 320px;
+      input {
+        width: 100%;
+        max-width: 320px;
+        min-width: 320px;
+      }
+    }
+  }
+
+  input {
+    padding: 10px 30px 10px 15px;
+  }
+}
+
+.wrapper {
+  background: #fff;
+  border-radius: 8px;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  flex-direction: row;
+  //padding-bottom: 1em;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  & div {
+    border-radius: 8px !important;
+    text-transform: capitalize;
+  }
+}
+
+.dayInput {
+  height: 38px;
+  width: 100px;
+  padding: 0px 0px 4px 0px;
+  background: transparent;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  border-bottom: 1px solid #131314;
+}
+
+.Day {
+  border-radius: 8px;
+}
+
+.birthday {
+  @media (max-width: 672px) {
+    flex-wrap: wrap;
+    & > div {
+      width: 100%;
+      max-width: 320px;
+
+      input {
+        max-width: 320px;
+        width: 100%;
+      }
+    }
+  }
+
+  & > div {
+    position: relative;
+  }
+}
+
+.phone {
+  @media (max-width: 672px) {
+    flex-wrap: wrap;
+    & > div {
+      width: 100%;
+      max-width: 320px;
+
+      input {
+        max-width: 320px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.gender {
+  input {
+    display: none;
+  }
+
+  & div {
+    margin: 0;
+  }
+
+  & label {
+    margin-bottom: 12px;
+  }
+}
+
+.password {
+  transition: .3s;
+  position: relative;
+  flex-wrap: wrap;
+  @media (max-width: 672px) {
+    max-width: 320px;
+    justify-content: space-between;
+
+    .dropdownPass {
+      width: 100%;
+      position: relative;
+      //right: 110px;
+    }
+  }
+
+  & > div {
+    margin: 0;
+  }
+}

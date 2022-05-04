@@ -1,0 +1,58 @@
+.question {
+  max-width: 808px;
+  margin: 0 auto;
+
+  h1 {
+    margin: 100px 0px 40px 0px;
+
+    div {
+      margin-top: 16px;
+    }
+  }
+
+  .input {
+    @media (max-width: 572px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start !important;
+      p{
+        margin-bottom: 16px;
+      }
+    }
+    & div {
+
+      width: 70%;
+      max-width: 600px;
+      @media (max-width: 572px) {
+        width: 100%;
+      }
+
+      & input, textarea {
+        width: 100%;
+        border: 1px solid #131314;
+        color: #131314 !important;
+        font-size: 16px;
+        line-height: 140%;
+        padding: 11px 12px;
+      }
+
+    }
+
+    textarea {
+      color: #131314 !important;
+      @media (max-width: 680px) {
+        max-width: 400px;
+      }
+      @media (max-width: 572px) {
+        max-width: none;
+        width: 100%;
+      }
+    }
+
+  }
+
+  button {
+    margin-top: 24px;
+  }
+
+}

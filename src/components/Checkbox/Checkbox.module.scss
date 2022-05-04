@@ -1,0 +1,109 @@
+@mixin hide {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@mixin slider-size {
+  width: var(--slider-size);
+  height: var(--slider-size);
+}
+
+$slider-background: #fff;
+$slider-active-background: #4853A2;
+$slider-before-background: #fff;
+$slider-active-before-background: #4853A2;
+
+$switch-width: 15px;
+$switch-height: 15px;
+$switch-position: 2px;
+$slider-border-width: 1px;
+
+:root {
+  $slider-border: $slider-border-width solid $slider-active-background;
+  $slider-size: (($switch-height - ($switch-position * 2)) - ($slider-border-width * 2));
+  $slider-active-before-position: $switch-width -
+    (($switch-position * 2) + $slider-size + ($slider-border-width * 2));
+  $slider-background: $slider-background;
+  $slider-active-background: $slider-active-background;
+  $slider-before-background: $slider-before-background;
+  $slider-active-before-background: $slider-active-before-background;
+
+  --switch-width: #{$switch-width};
+  --switch-height: #{$switch-height};
+  --switch-position: #{$switch-position};
+  --slider-size: #{$slider-size};
+  --slider-background: #{$slider-background};
+  --slider-border: #{$slider-border};
+  --slider-transition: 0.4s;
+  --slider-active-background: #{$slider-active-background};
+  --slider-before-background: #{$slider-before-background};
+  --slider-active-before-background: #{$slider-active-before-background};
+  --slider-active-before-position: #{$slider-active-before-position};
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin: 0 0 10px 0px;
+
+  .switch {
+    position: relative;
+    width: 15px;
+    height: 15px;
+
+    input{
+      display:none !important;
+    }
+    & > input[type='checkbox'] {
+
+      @include hide();
+
+      &:checked + .check,
+      &:focus + .check {
+        background-color: #4853A2;
+      }
+
+      &:checked + .check:before {
+        transform: translateX(var(--slider-active-before-position));
+        background-color: var(--slider-active-before-background);
+      }
+    }
+
+    & > .check {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: var(--slider-background);
+      border: var(--slider-border);
+      border-radius: 3px;
+      transition: var(--slider-transition);
+
+      &::before {
+        position: absolute;
+        bottom: var(--switch-position);
+        left: var(--switch-position);
+        @include slider-size;
+        content: '';
+        background-image: url("./assets/svg/arrow.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 10px;
+        background-color: var(--slider-before-background);
+        border-radius: 3px;
+        transition: var(--slider-transition);
+      }
+    }
+  }
+
+  .label {
+    margin: 0 0 0 10px;
+    //font-weight: bold;
+    user-select: none;
+  }
+}

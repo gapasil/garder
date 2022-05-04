@@ -1,0 +1,40 @@
+.order-success{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  flex-direction: column;
+
+  &__wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon{
+    width: 60px;
+    height: 60px;
+    display: block;
+    background: url("assets/images/checked.svg") no-repeat;
+    background-size: 100% 100%;
+  }
+
+  &__text{
+    font-size: 1.7em;
+  }
+
+  &__back{
+    display: inline-block;
+    color: #1474a4;
+    font-size: 1.1em;
+    border-bottom: 1px solid currentColor;
+    transition: transform 0.2s;
+
+    &:hover{
+      transform: translateY(-4px);
+      border-bottom-style: dotted;
+    }
+
+  }
+
+}

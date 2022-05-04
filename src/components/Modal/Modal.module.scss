@@ -1,0 +1,20 @@
+.content {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 24px 24px;
+    span{
+      display: flex;
+      align-items: center;
+      img{
+        margin-right: 8px;
+      }
+    }
+  }
+
+  .close {
+    cursor: pointer;
+  }
+
+}

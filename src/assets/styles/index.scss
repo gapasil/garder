@@ -1,0 +1,712 @@
+@import './utils/_fonts';
+@import "utils/vars";
+@import '~normalize.css';
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: $transition;
+
+  &:hover {
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  color: #1c1d21;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 130%;
+}
+
+h2 {
+  font-size: 28px;
+  line-height: 125%;
+}
+
+h3 {
+  font-size: 22px;
+  line-height: 125%;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 145%;
+}
+
+.bold{
+  font-weight: bold;
+}
+.t_h1 {
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 130%;
+}
+.t_h2 {
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 125%;
+}
+.t_h3 {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 125%;
+}
+
+.t_supbody {
+  font-size: 18px;
+  line-height: 145%;
+}
+
+.t_body {
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+.t_sub {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 150%;
+}
+
+.t_footnote {
+  font-size: 12px;
+  line-height: 140%;
+}
+
+.c_gray {
+  color: #999999;
+}
+.c_black {
+  color: #131314;
+}
+
+//h2 {
+//  font-size: 48px;
+//  @media (max-width: 768px) {
+//    font-size: 38px;
+//  }
+//  @media (max-width: 480px) {
+//    font-size: 28px;
+//  }
+//}
+//
+//h3 {
+//  font-size: 42px;
+//  font-weight: 400;
+//  @media (max-width: 768px) {
+//    font-size: 32px;
+//  }
+//  @media (max-width: 488px) {
+//    font-size: 22px;
+//  }
+//}
+
+//h4 {
+//  font-size: 32px;
+//}
+//
+//h5 {
+//  font-size: 28px;
+//}
+//
+//h6 {
+//  font-size: 21px;
+//}
+
+// Можно избавиться от этих стилей,
+// кроме .container, так как придется переписывать
+// padding и margin стили можно удалить, но они перестанут работать везде
+
+.container {
+  max-width: 1220px;
+  padding: 0;
+  margin: 0 auto;
+
+  @media (max-width: 1140px) {
+    max-width: 960px;
+  }
+  @media (max-width: 960px) {
+    max-width: 672px;
+  }
+
+  @media (max-width: 672px) {
+    max-width: 572px;
+  }
+  @media (max-width: 572px) {
+    max-width: 480px;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 328px;
+  }
+
+  &.relative,
+  & .relative {
+    position: relative;
+  }
+
+  &.fluid,
+  & .fluid {
+    width: 100%;
+  }
+
+  &.flex,
+  & .flex {
+    display: flex;
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.wrap {
+      flex-wrap: wrap;
+    }
+
+    &.a {
+      &-start {
+        align-items: flex-start;
+      }
+
+      &-center {
+        align-items: center;
+      }
+
+      &-end {
+        align-items: flex-end;
+      }
+    }
+
+    &.j {
+      &-start {
+        justify-content: flex-start;
+      }
+
+      &-center {
+        justify-content: center;
+      }
+
+      &-end {
+        justify-content: flex-end;
+      }
+
+      &-between {
+        justify-content: space-between;
+      }
+
+      &-around {
+        justify-content: space-around;
+      }
+
+      &-evenly {
+        justify-content: space-evenly;
+      }
+    }
+  }
+
+  & .gr {
+    &-1 {
+      flex-grow: 1;
+    }
+
+    &-2 {
+      flex-grow: 2;
+    }
+  }
+
+  &.m,
+  & .m {
+    &t {
+      &-05 {
+        margin-top: 5px;
+      }
+
+      &-1 {
+        margin-top: 10px;
+      }
+
+      &-15 {
+        margin-top: 15px;
+      }
+
+      &-2 {
+        margin-top: 20px;
+      }
+
+      &-25 {
+        margin-top: 25px;
+      }
+
+      &-3 {
+        margin-top: 30px;
+      }
+
+      &-35 {
+        margin-top: 35px;
+      }
+
+      &-4 {
+        margin-top: 40px;
+      }
+
+      &-45 {
+        margin-top: 45px;
+      }
+
+      &-5 {
+        margin-top: 50px;
+      }
+
+      &-55 {
+        margin-top: 55px;
+      }
+
+      &-6 {
+        margin-top: 60px;
+      }
+
+      &-65 {
+        margin-top: 65px;
+      }
+
+      &-7 {
+        margin-top: 70px;
+      }
+
+      &-75 {
+        margin-top: 75px;
+      }
+
+      &-8 {
+        margin-top: 80px;
+      }
+
+      &-10 {
+        margin-top: 100px;
+      }
+
+      &-14x {
+        margin-top: 140px;
+      }
+    }
+
+    &r {
+      &-05 {
+        margin-right: 5px;
+      }
+
+      &-1 {
+        margin-right: 10px;
+      }
+
+      &-15 {
+        margin-right: 15px;
+      }
+
+      &-2 {
+        margin-right: 20px;
+      }
+
+      &-25 {
+        margin-right: 25px;
+      }
+
+      &-3 {
+        margin-right: 30px;
+      }
+
+      &-35 {
+        margin-right: 35px;
+      }
+
+      &-4 {
+        margin-right: 40px;
+      }
+
+      &-45 {
+        margin-right: 45px;
+      }
+
+      &-5 {
+        margin-right: 50px;
+      }
+
+      &-55 {
+        margin-right: 55px;
+      }
+
+      &-6 {
+        margin-right: 60px;
+      }
+
+      &-65 {
+        margin-top: 65px;
+      }
+
+      &-7 {
+        margin-right: 70px;
+      }
+
+      &-75 {
+        margin-right: 75px;
+      }
+
+      &-8 {
+        margin-right: 80px;
+      }
+
+      &-150 {
+        margin-right: 150px;
+      }
+    }
+
+    &b {
+      &-05 {
+        margin-bottom: 5px;
+      }
+
+      &-1 {
+        margin-bottom: 10px;
+      }
+
+      &-15 {
+        margin-bottom: 15px;
+      }
+
+      &-2 {
+        margin-bottom: 20px;
+      }
+
+      &-25 {
+        margin-bottom: 25px;
+      }
+
+      &-3 {
+        margin-bottom: 30px;
+      }
+
+      &-35 {
+        margin-bottom: 35px;
+      }
+
+      &-4 {
+        margin-bottom: 40px;
+      }
+
+      &-45 {
+        margin-bottom: 45px;
+      }
+
+      &-5 {
+        margin-bottom: 50px;
+      }
+
+      &-55 {
+        margin-bottom: 55px;
+      }
+
+      &-6 {
+        margin-bottom: 60px;
+      }
+
+      &-65 {
+        margin-bottom: 65px;
+      }
+
+      &-7 {
+        margin-bottom: 70px;
+      }
+
+      &-75 {
+        margin-bottom: 75px;
+      }
+
+      &-8 {
+        margin-bottom: 80px;
+      }
+
+      &-10x {
+        margin-bottom: 100px;
+      }
+      &-14x {
+        margin-bottom: 140px;
+      }
+    }
+
+    &l {
+      &-05 {
+        margin-left: 5px;
+      }
+
+      &-1 {
+        margin-left: 10px;
+      }
+
+      &-15 {
+        margin-left: 15px;
+      }
+
+      &-2 {
+        margin-left: 20px;
+      }
+
+      &-25 {
+        margin-left: 25px;
+      }
+
+      &-3 {
+        margin-left: 30px;
+      }
+
+      &-35 {
+        margin-left: 35px;
+      }
+
+      &-4 {
+        margin-left: 40px;
+      }
+
+      &-45 {
+        margin-left: 45px;
+      }
+
+      &-5 {
+        margin-left: 50px;
+      }
+
+      &-55 {
+        margin-left: 55px;
+      }
+
+      &-6 {
+        margin-left: 60px;
+      }
+
+      &-65 {
+        margin-left: 65px;
+      }
+
+      &-7 {
+        margin-left: 70px;
+      }
+
+      &-75 {
+        margin-left: 75px;
+      }
+
+      &-8 {
+        margin-left: 80px;
+      }
+
+      &-120 {
+        margin-left: 120px;
+      }
+
+      &-245 {
+        margin-left: 245px;
+      }
+    }
+  }
+
+  &.p,
+  & .p {
+    &t {
+      &-05 {
+        padding-top: 5px;
+      }
+
+      &-1 {
+        padding-top: 10px;
+      }
+
+      &-15 {
+        padding-top: 15px;
+      }
+
+      &-2 {
+        padding-top: 20px;
+      }
+
+      &-25 {
+        padding-top: 25px;
+      }
+
+      &-3 {
+        padding-top: 30px;
+      }
+
+      &-35 {
+        padding-top: 35px;
+      }
+
+      &-4 {
+        padding-top: 40px;
+      }
+
+      &-45 {
+        padding-top: 45px;
+      }
+
+      &-5 {
+        padding-top: 50px;
+      }
+    }
+
+    &r {
+      &-1 {
+        padding-right: 5px;
+      }
+
+      &-1 {
+        padding-right: 10px;
+      }
+
+      &-15 {
+        padding-right: 15px;
+      }
+
+      &-2 {
+        padding-right: 20px;
+      }
+
+      &-25 {
+        padding-right: 25px;
+      }
+
+      &-3 {
+        padding-right: 30px;
+      }
+
+      &-35 {
+        padding-right: 35px;
+      }
+
+      &-4 {
+        padding-right: 40px;
+      }
+
+      &-45 {
+        padding-right: 45px;
+      }
+
+      &-5 {
+        padding-right: 50px;
+      }
+    }
+
+    &b {
+      &-05 {
+        padding-bottom: 5px;
+      }
+
+      &-1 {
+        padding-bottom: 10px;
+      }
+
+      &-15 {
+        padding-bottom: 15px;
+      }
+
+      &-2 {
+        padding-bottom: 20px;
+      }
+
+      &-25 {
+        padding-bottom: 25px;
+      }
+
+      &-3 {
+        padding-bottom: 30px;
+      }
+
+      &-35 {
+        padding-bottom: 35px;
+      }
+
+      &-4 {
+        padding-bottom: 40px;
+      }
+
+      &-45 {
+        padding-bottom: 45px;
+      }
+
+      &-5 {
+        padding-bottom: 50px;
+      }
+    }
+
+    &l {
+      &-1 {
+        padding-left: 5px;
+      }
+
+      &-1 {
+        padding-left: 10px;
+      }
+
+      &-15 {
+        padding-left: 15px;
+      }
+
+      &-2 {
+        padding-left: 20px;
+      }
+
+      &-25 {
+        padding-left: 25px;
+      }
+
+      &-3 {
+        padding-left: 30px;
+      }
+
+      &-35 {
+        padding-left: 35px;
+      }
+
+      &-4 {
+        padding-left: 40px;
+      }
+
+      &-45 {
+        padding-left: 45px;
+      }
+
+      &-5 {
+        padding-left: 50px;
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.subscribe {
+  margin-top: 100px;
+  padding: 50px 0px;
+  background: url("./assets/svg/bg.png") right no-repeat, linear-gradient(to bottom, #fff 11%, #EBECF5 11%);
+
+  form {
+    display: flex;
+    width: 70%;
+
+    input {
+      width: 70%;
+      max-width: 400px;
+      min-width: 310px;
+      margin-right: 25px;
+      border: none;
+      @media(max-width: 480px){
+        min-width:auto;
+      }
+    }
+
+    @media(max-width: 620px) {
+      flex-wrap: wrap;
+      width: 100%;
+      div{
+        width: 100%;
+        input{
+          width: 100%;
+          max-width: none;
+          margin: 0 0 16px 0;
+        }
+        button{
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .subscribeContent {
+    width: 55%;
+    max-width: 700px;
+    @media(max-width: 768px) {
+      width: 100%;
+      max-width: 556px;
+    }
+  }
+
+  @media(max-width: 1140px) {
+    background: url("./assets/svg/bg_tablet.svg");
+    background-size: cover;
+    padding: 48px;
+  }
+  @media(max-width: 620px) {
+    padding: 20px 0px;
+  }
+}

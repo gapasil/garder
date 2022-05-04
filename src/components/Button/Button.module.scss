@@ -1,0 +1,131 @@
+@import '../../assets/styles/utils/vars';
+
+:root {
+  --scale: 0;
+}
+
+.component {
+  & > button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    vertical-align: middle;
+    //border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 1px solid #4853A2;
+
+    img {
+      max-width: 30px;
+      margin-right: 20px;
+    }
+
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      background: $light-gray;
+    }
+  }
+
+  //
+  &.primary {
+    & > button {
+      color: $white;
+      background-color: $main;
+
+      .ripple {
+        background-color: rgba(lighten($light-gray, 30%), 0.5);
+      }
+
+      &:hover {
+        background-color: darken(#5B69CC, 5%);
+      }
+
+      &:focus {
+        //box-shadow: 0 0 0 3px rgba(#000, 0.1);
+        box-shadow: 0px 4px 4px rgba(72, 83, 162, 0.25);
+      }
+    }
+  }
+
+  &.invers {
+    & > button {
+      color: #4853A2;
+      background-color: $white;
+
+      .ripple {
+        background-color: rgba(lighten($light-gray, 30%), 0.5);
+      }
+
+      &:hover {
+        background-color: darken(#5B69CC, 5%);
+        color:$white;
+      }
+
+      &:focus {
+        //box-shadow: 0 0 0 3px rgba(#000, 0.1);
+        box-shadow: 0px 4px 4px rgba(72, 83, 162, 0.25);
+      }
+    }
+  }
+
+
+  //&.secondary {
+  //  & > button {
+  //    color:$white;
+  //    background-color: $background-secondary;
+  //
+  //    .ripple {
+  //      background-color: rgba(lighten($background-primary, 5%), 0.75);
+  //    }
+  //
+  //    &:hover {
+  //      background-color: lighten($background-secondary, 20%);
+  //    }
+  //
+  //    &:focus {
+  //      box-shadow: 0 0 0 4px rgba($background-secondary, 0.5);
+  //    }
+  //  }
+  //}
+
+  //
+  &.small {
+    & > button {
+      padding: 6px 10px;
+      font-size: 14px;
+      border-radius: 4px;
+    }
+  }
+
+  &.middle {
+    & > button {
+      padding: 12px 30px;
+      font-size: 16px;
+    }
+  }
+
+  & .ripple {
+    width: 2px;
+    height: 2px;
+    position: absolute;
+    border-radius: 50%;
+    animation: rippleEffect 0.5s ease-in-out;
+
+    @keyframes rippleEffect {
+      0% {
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(var(--scale));
+      }
+    }
+  }
+}

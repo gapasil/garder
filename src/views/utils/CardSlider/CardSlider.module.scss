@@ -1,0 +1,22 @@
+.hit {
+  margin-top: 100px;
+  @media(max-width: 960px) {
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 34px;
+    line-height: 130%;
+
+  }
+}
+
+.lazy {
+  max-width: 185px;
+  min-width: 130px;
+  width: 100%;
+  @media (max-width: 480px) {
+    max-width: 158px;
+  }
+
+}

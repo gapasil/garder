@@ -1,0 +1,10 @@
+[[redirects]]
+    from = "/v2/*"
+    to = "https://api.gardershop.kz/v2/:splat"
+    status = 200
+    force = true
+
+[[redirects]]
+    from = "/*"
+    to = "/index.html"
+    status = 200

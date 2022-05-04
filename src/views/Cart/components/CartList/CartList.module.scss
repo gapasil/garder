@@ -1,0 +1,16 @@
+.cart{
+  width: 68%;
+  max-width: 912px;
+  margin-right: 24px;
+  & > div:not(:last-child){
+    margin-bottom: 24px;
+  }
+  @media(max-width:1140px ){
+  width: 62%;
+  max-width: none;
+}
+  @media(max-width:1024px ){
+    width: 100%;
+    max-width: none;
+  }
+}

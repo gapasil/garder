@@ -1,0 +1,46 @@
+.questions {
+  max-width: 808px;
+  margin: 0 auto;
+
+  h1 {
+    margin: 85px 0px 68px 0px;
+    div{
+      margin-top: 16px;
+    }
+  }
+
+  .item {
+    background: transparent;
+    border-radius: 8px;
+    padding: 12px 12px 12px 0px;
+    margin-bottom: 24px;
+    cursor: pointer;
+
+    & > p:last-child {
+      display: none;
+      opacity: 0;
+    }
+
+    &.active {
+
+      padding: 12px;
+      background: rgba(204, 204, 204, 0.16);
+      & > div p:first-child {
+        margin-bottom: 24px;
+      }
+      .active {
+        display: block;
+        opacity: 1;
+      }
+    }
+
+    & .close {
+      transition: .3s;
+    }
+
+    & .open {
+      opacity: 0.16;
+      transform: rotate(45deg);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.block{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #4852a257;
+    border-radius: 5px;
+    margin: 15px;
+}
+.block p{
+    padding-top: 15px;
+    color: black;
+}

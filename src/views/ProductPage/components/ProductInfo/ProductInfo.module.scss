@@ -1,0 +1,96 @@
+.info {
+  max-width: 392px;
+  min-width: 324px;
+  .selectors {
+    color: #999999;
+  }
+  @media(max-width: 960px) {
+    width: 48%;
+  }
+  @media(max-width: 680px) {
+  max-width: none;
+  width: 100%;
+}
+  .buttons {
+    button {
+      padding: 11px 55px !important;
+      @media (max-width: 1140px) {
+        padding: 11px 28px !important;
+      }
+      img {
+        margin-right: 12px;
+      }
+    }
+
+    .favBtn {
+      padding: 8px 12px;
+      border: 1px solid #CCCCCC;
+      border-radius: 8px;
+    }
+  }
+
+  .ship {
+    cursor: pointer;
+
+    & > span {
+      img {
+        user-select: none;
+        transform: rotate(180deg);
+        transition: .3s;
+      }
+    }
+
+    &.active > span {
+      img {
+        transform: rotate(0deg);
+      }
+    }
+
+    .shipPrice {
+      font-weight: bold;
+    }
+  }
+
+  .description {
+    & > p:first-child {
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+
+    .item {
+      & > div {
+        min-width: 120px;
+        max-width: 120px;
+        word-wrap: break-word;
+        margin-right: 16px;
+        color: #999999;
+      }
+    }
+  }
+
+  .select {
+    [class$="-control"] {
+      border: 1px solid #131314 !important;
+      border-radius: 8px;
+    }
+  }
+}
+
+.line {
+  border: 1px solid #CCCCCC;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 24px 24px 0 0;
+
+  & div:first-child {
+    margin-right: 16px;
+  }
+}
+
+.list {
+  padding:24px  24px 0 24px;
+}

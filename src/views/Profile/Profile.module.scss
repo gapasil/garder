@@ -1,0 +1,26 @@
+.profile{
+  position: static !important;
+  height: auto !important;
+  width: auto !important;
+  &.visible{
+    @media(max-width: 960px) {
+      position: fixed !important;
+      width: 100% !important;
+      height: 100vh !important;
+      top:0;
+      left:0;
+      z-index: 3;
+      background: #fff;
+      & > div {
+        position: relative;
+
+        & > div {
+          position: relative;
+          max-width: 672px;
+          margin: 0 auto !important;
+          height: 100vh;
+        }
+      }
+    }
+  }
+}

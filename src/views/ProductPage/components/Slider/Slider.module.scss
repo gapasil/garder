@@ -1,0 +1,103 @@
+.sliderContainer {
+  width: 48%;
+  max-width: 800px;
+
+  display: flex;
+  align-items: flex-start;
+  margin-right: 60px;
+  @media(max-width: 1140px) {
+    flex-direction: column-reverse;
+    margin-right: 24px;
+    width: 55%;
+    max-width: 500px;
+  }
+  @media(max-width: 960px) {
+    max-width: 324px;
+    width: 48%;
+  }
+  @media(max-width: 680px) {
+    max-width: none;
+    width: 100%;
+  }
+
+
+  .sliderNav {
+    width: 10%;
+
+    max-height: 680px;
+    min-width: 80px;
+    margin-right: 62px;
+    @media (max-width: 1140px) {
+     width: 100%;
+    }
+    & [class$="-track"] {
+      display: block;
+      @media (max-width: 1140px) {
+        display: flex;
+      }
+    }
+
+
+    & img {
+      height: 80px;
+      width: 80px !important;
+      object-fit: cover;
+      border: 1px solid #CCCCCC;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      @media(max-width: 1140px){
+        display: block !important;
+        margin:0 auto 20px;
+        height: 48px !important;
+        width: 48px !important;
+      }
+    }
+  }
+
+  .sliderMain {
+    height: 100%;
+    max-width: 624px;
+    max-height: 680px;
+    width: 100%;
+    position: relative;
+    @media (max-width: 1140px) {
+      margin-bottom: 20px;
+    }
+    & > div {
+      height: 100%;
+      @media (max-width:1140px) {
+        button{
+          display: none !important;
+        }
+      }
+    }
+
+    & [class$="-list"] {
+      height: 100%;
+    }
+
+    & [class$="-track"] {
+      height: 100%;
+    }
+
+    & [class$="-slide"] > div {
+      height: 100%;
+    }
+
+    & [class$="-current"] > div {
+      height: 100%;
+    }
+
+    & [class$="slick-slide"] > div {
+      height: 100%;
+    }
+
+    & img {
+      height: 100%;
+      max-height: 680px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+  }
+}

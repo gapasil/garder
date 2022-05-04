@@ -1,0 +1,42 @@
+.containerKnop{
+    display: flex;
+    width: 100px;
+    justify-content: end;
+    background: white;
+    font-size: 15px;
+}
+.blockKnop{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.sum{
+    width: 40%;
+    justify-self: start;
+}
+.sum p{
+    display: inline-block;
+    background: #4853A2;
+    border:2px solid #4853A2;
+    border-radius: 2px;
+    color: white;
+    font-size: 15px;
+}
+.blockRasrochka{
+    flex-direction: column;
+    margin-left: 20px;
+}
+.text{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.text p{
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    font-size: 15px;
+    color: black;
+}

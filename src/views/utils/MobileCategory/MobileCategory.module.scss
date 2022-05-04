@@ -1,0 +1,154 @@
+.linkCat{
+  color: #131314;
+}
+.mobileMenu {
+  background: #fff;
+  width: 100%;
+  max-width: 512px;
+
+  & > img:first-child {
+    margin: 24px 0 40px 24px;
+  }
+
+  & .listMenu {
+    padding: 0 0 20px 0;
+    width: 100%;
+
+    & > div {
+      & > a {
+        padding: 0 0 0 28px;
+      }
+
+      & > span {
+        padding: 0 0 0 28px;
+      }
+
+      & > div {
+        & > a {
+          padding: 0 0 0 36px;
+        }
+
+        & > span {
+          padding: 0 0 0 36px;
+        }
+      }
+    }
+  }
+
+  & .support {
+    padding: 40px 0 0 24px;
+  }
+
+  & .catLink {
+    margin-bottom: 20px;
+    width: 100%;
+
+    span {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      margin-right: 8px;
+    }
+
+    & > a {
+      font-size: 16px;
+      line-height: 140%;
+      color: #131314;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    & > span {
+      font-size: 16px;
+      line-height: 140%;
+      color: #131314;
+      padding-bottom: 4px;
+      border-bottom: 1px solid transparent;
+    }
+
+    &.active > a span {
+      border-bottom: 1px solid #131314;
+    }
+
+    & > div {
+      margin: 16px 0 16px 0;
+      width: 100%;
+
+      & a {
+        color: #999999;
+      }
+
+      & span {
+        color: #999999;
+      }
+    }
+  }
+}
+
+.pickers {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  bottom: 24px;
+  left: 24px;
+
+  .dropdown {
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+
+    & .list {
+      top: auto;
+      bottom: 30px;
+    }
+  }
+}
+
+.arrowLink {
+  & > a {
+    font-size: 16px;
+    line-height: 140%;
+    color: #131314;
+    margin-bottom: 16px;
+  }
+
+  span {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    margin-right: 8px;
+  }
+}
+
+.catDropdown {
+  display: none;
+}
+
+.threeDropdownActive {
+  & > a {
+    padding: 0 0 0 0 !important;
+    background: rgba(72, 83, 162, 0.08);
+
+    & > span {
+      color: #4853A2 !important;
+    }
+  } & > span {
+    //padding: 0 0 0 0 !important;
+    background: rgba(72, 83, 162, 0.08);
+
+    & > span {
+      color: #4853A2 !important;
+    }
+  }
+
+  a span {
+    color: #999999;
+    margin: 8px 0 8px 60px;
+  }
+}

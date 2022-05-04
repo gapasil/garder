@@ -1,0 +1,29 @@
+.component {
+  input {
+    width: 100%;
+    padding: 15px 20px;
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    border: 3px solid transparent;
+    outline: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+
+    &::placeholder {
+      color: rgba(#000, 0.5);
+    }
+  }
+
+  &.invalid {
+    input {
+      //margin: 0 0 5px;
+      //box-shadow: 0 0 0 3px rgba(#f44336, 0.4);
+      border: 1px solid #CC3D3D;
+    }
+
+    small {
+      font-weight: 700;
+      color: #f44336;
+    }
+  }
+}

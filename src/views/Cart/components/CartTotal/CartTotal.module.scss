@@ -1,0 +1,18 @@
+.total {
+  min-width: 288px;
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
+
+  div {
+    width: 100%;
+
+    button {
+      width: 100%;
+    }
+    a{
+      width: 100%;
+    }
+  }
+
+}

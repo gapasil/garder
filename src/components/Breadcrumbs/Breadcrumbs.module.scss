@@ -1,0 +1,22 @@
+.breadcrumbs{
+  display: flex;
+  .link{
+    text-transform: uppercase;
+    color: #131314;
+    &:last-child{
+      color:#999999;
+    }
+    &:not(:last-child)::after{
+      content:'';
+      display: inline-block;
+      width: 15px;
+      height: 8px;
+      background:url('./assets/svg/arrow.svg');
+      margin:0px 10px;
+    }
+  }
+  @media(max-width: 768px){
+    display: none;
+  }
+
+}

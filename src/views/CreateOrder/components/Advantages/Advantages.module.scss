@@ -1,0 +1,22 @@
+.advantages{
+  max-width: 392px;
+  width: 25%;
+  @media (max-width: 960px) {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 60px;
+    & > div{
+      width: 31%;
+    }
+  }
+
+  @media(max-width: 480px){
+    flex-wrap: wrap;
+    & > div{
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.item {
+  max-width: 808px;
+  @media (max-width: 480px) {
+    & > div{
+      flex-direction: column;
+      & > span{
+        margin-bottom: 12px;
+        margin-right: 0 !important;
+      }
+    }
+  }
+  & span {
+    min-width: 160px;
+    text-transform: uppercase;
+  }
+
+  & a {
+    color: #000000;
+  }
+}

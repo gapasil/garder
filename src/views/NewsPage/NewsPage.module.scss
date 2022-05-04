@@ -1,0 +1,37 @@
+.news{
+  max-width: 808px;
+  margin:100px auto;
+  img {
+    width: 100%;
+  }
+  .info{
+    min-width: 146px;
+    margin-right: 62px;
+    @media(max-width: 960px){
+      margin-right: 24px;
+    }
+    @media (max-width: 480px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 0;
+      margin-bottom: 28px;
+    }
+    & > p{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+  .date{
+    p span{
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+  }
+}
+.content{
+  @media(max-width: 480px){
+    display: flex;
+    flex-direction: column;
+  }
+}
