@@ -1,0 +1,30 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "exclude": [
+          "transform-async-to-generator",
+          "transform-regenerator"
+        ]
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    "@babel/plugin-transform-runtime",
+    "@babel/plugin-transform-react-jsx",
+    "@babel/plugin-proposal-class-properties",
+    [
+      "module:fast-async",
+      {
+        "spec": true
+      }
+    ]
+  ]
+}
